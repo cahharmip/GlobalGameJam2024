@@ -11,9 +11,7 @@ public class TypingPackageController : MonoBehaviour
 
   private string definedWord = default;
   private Transform target = default;
-  private float speed = 0.03f;
   private int damage = 1;
-  private Vector3 _PlayerDirection = default;
   private int correctCount = 0;
   [SerializeField]
   private float wordSpacing = 0;
@@ -73,7 +71,7 @@ public class TypingPackageController : MonoBehaviour
   private void Setup(WordObject wordObject, TypingDataReceiver receiver, Transform target)
   {
     Vector3 lastTransform = default;
-    speed = wordObject.speed;
+    desiredDuration = wordObject.durationToTarget;
     definedWord = wordObject.word.ToUpper();
     damage = wordObject.damage;
     this.target = target;

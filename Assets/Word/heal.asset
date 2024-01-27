@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: heal
   m_EditorClassIdentifier: 
   word: heal
-  speed: 0
+  durationToTarget: 3
   wpoint: 0
   damage: 0

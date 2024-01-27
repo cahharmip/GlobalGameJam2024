@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: dog
   m_EditorClassIdentifier: 
   word: dog
-  speed: 0.3
+  durationToTarget: 3
   wpoint: 1
+  damage: 1

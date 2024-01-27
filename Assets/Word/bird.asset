@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: bird
   m_EditorClassIdentifier: 
   word: bird
-  speed: 1
+  durationToTarget: 5
   wpoint: 0
+  damage: 1

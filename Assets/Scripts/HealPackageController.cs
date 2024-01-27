@@ -56,7 +56,7 @@ public class HealPackageController : MonoBehaviour
   private void Setup(WordObject wordObject, TypingDataReceiver receiver, Transform target)
   {
     Vector3 lastTransform = default;
-    speed = wordObject.speed;
+    speed = 0;
     definedWord = wordObject.word.ToUpper();
     damage = wordObject.damage;
     this.target = target;

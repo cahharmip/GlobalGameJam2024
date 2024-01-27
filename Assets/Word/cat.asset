@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: cat
   m_EditorClassIdentifier: 
   word: cat
-  speed: 0.3
+  durationToTarget: 3
   wpoint: 2
+  damage: 1
