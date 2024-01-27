@@ -10,12 +10,12 @@ public class ScoreUI : MonoBehaviour
 
   public void Setup(ScoreData scoreData)
   {
-    scoreUI.GetComponent<TextMeshProUGUI>().text = "0";
+    scoreUI.GetComponent<TextMeshProUGUI>().text = "0pts";
     scoreData.Subscribe(OnScoreUpdate);
   }
 
   public void OnScoreUpdate(int score)
   {
-    scoreUI.GetComponent<TextMeshProUGUI>().text = score.ToString();
+    scoreUI.GetComponent<TextMeshProUGUI>().text = score.ToString() + "pts";
   }
 }

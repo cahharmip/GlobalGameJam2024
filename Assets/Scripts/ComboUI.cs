@@ -16,6 +16,6 @@ public class ComboUI : MonoBehaviour
 
   public void OnScoreUpdate(ComboStruct combo)
   {
-    comboUI.GetComponent<TextMeshProUGUI>().text = (combo.comboName.ToString() + "\n" + combo.comboScore.ToString());
+    comboUI.GetComponent<TextMeshProUGUI>().text = (combo.comboName.ToString() + "\n" + "+" + combo.comboScore.ToString() + "pts");
   }
 }
