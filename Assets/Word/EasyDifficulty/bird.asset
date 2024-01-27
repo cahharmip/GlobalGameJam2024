@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: bird
   m_EditorClassIdentifier: 
   word: bird
-  durationToTarget: 2.7
-  wpoint: 2
+  durationToTarget: 3.7
+  wpoint: 0
   damage: 1
   delayNextWord: 0
