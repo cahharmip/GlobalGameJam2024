@@ -26,8 +26,23 @@ public class TypingPackageController : MonoBehaviour
   public event OnComplete onComplete;
   private ScoreData scoreData;
   private ComboData comboData;
-  private void Update()
+
+    [Header("Lerp Movement")]
+    private Vector3 startPosition;
+    private Vector3 endPosition;
+    [SerializeField] private float desiredDuration = 5;
+    private float elapsedTime;
+    [SerializeField] AnimationCurve curve;
+
+    private void Start()
+    {
+        startPosition = transform.position;
+    }
+
+    private void Update()
   {
+        endPosition = target.position;
+
     if (mode == 1)
     {
       Vector3 lastTransform = default;
@@ -119,11 +134,16 @@ public class TypingPackageController : MonoBehaviour
   {
     if (target != null)
     {
-      if (!(Vector3.Distance(transform.position, target.position) < 1f))
-      {
-        _PlayerDirection = Vector3.Normalize(new Vector3(transform.position.x - target.transform.position.x, transform.position.y - target.transform.position.y));
-        transform.position = new Vector3(transform.position.x - (_PlayerDirection.x * speed), transform.position.y - (_PlayerDirection.y * speed), 0.0f);
-      }
+            //if (!(Vector3.Distance(transform.position, target.position) < 1f))
+            //{
+            //  _PlayerDirection = Vector3.Normalize(new Vector3(transform.position.x - target.transform.position.x, transform.position.y - target.transform.position.y));
+            //  transform.position = new Vector3(transform.position.x - (_PlayerDirection.x * speed), transform.position.y - (_PlayerDirection.y * speed), 0.0f);
+            //}
+
+            elapsedTime += Time.deltaTime;
+            float percentageCompelete = elapsedTime / desiredDuration;
+
+            transform.position = Vector3.Lerp(startPosition, endPosition, curve.Evaluate(percentageCompelete));
     }
   }
 
