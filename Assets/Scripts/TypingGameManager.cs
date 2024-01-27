@@ -17,6 +17,7 @@ public class TypingGameManager : MonoBehaviour
   private ScoreData scoreData;
   private ComboData comboData;
   private float sumTime;
+  private float delayNext = 0f;
   public void Setup(ScoreData scoreData, ComboData comboData)
   {
     this.scoreData = scoreData;
@@ -42,6 +43,17 @@ public class TypingGameManager : MonoBehaviour
       }
       if (timeCounter >= TickTime)
       {
+        if (delayNext > 0)
+        {
+          if (timeCounter < TickTime + delayNext)
+          {
+            return;
+          }
+          else
+          {
+            delayNext = 0;
+          }
+        }
         timeCounter = 0;
         GameObject typingPackage = Instantiate(Resources.Load<GameObject>(Const.TYPING_PACKAGE_PATH));
         typingPackage.transform.SetParent(spawnPoint[(int)wordList[wordIndex].wpoint].transform);
@@ -49,6 +61,7 @@ public class TypingGameManager : MonoBehaviour
         TypingDataReceiver receiver = GetComponent<TypingDataReceiver>();
         Transform player = GameObject.Find("Player").transform;
         typingPackage.GetComponent<TypingPackageController>().Setup(wordList[wordIndex], receiver, scoreData, comboData, player, () => { Destroy(typingPackage); });
+        delayNext = wordList[wordIndex].delayNextWord;
         wordIndex++;
       }
     }

@@ -16,3 +16,4 @@ MonoBehaviour:
   durationToTarget: 5.5
   wpoint: 1
   damage: 1
+  delayNextWord: 2
