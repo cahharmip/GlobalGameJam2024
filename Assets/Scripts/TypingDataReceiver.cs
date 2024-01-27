@@ -10,6 +10,7 @@ public class TypingDataReceiver : MonoBehaviour
   private string latestInput = default;
   private void Awake()
   {
+
   }
 
   private void Update()

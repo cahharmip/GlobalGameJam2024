@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: bird
   m_EditorClassIdentifier: 
   word: bird
-  speed: 0.3
+  speed: 1
   wpoint: 0

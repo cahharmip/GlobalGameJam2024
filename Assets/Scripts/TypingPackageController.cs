@@ -78,12 +78,16 @@ public class TypingPackageController : MonoBehaviour
       correctCount++;
     }
 
-    if (correctCount == definedWord.Length) this.receiver.typingDataReceiver -= (InputListenner);
+    if (correctCount == definedWord.Length) //typing complete
+    {
+      this.receiver.typingDataReceiver -= (InputListenner);
+      Destroy(gameObject);
+    };
   }
 
   private void MovementBehavior()
   {
-    if (!(Vector3.Distance(transform.position, target.position) < 0.01f))
+    if (!(Vector3.Distance(transform.position, target.position) < 1f))
     {
       _PlayerDirection = Vector3.Normalize(new Vector3(transform.position.x - target.transform.position.x, transform.position.y - target.transform.position.y));
       transform.position = new Vector3(transform.position.x - (_PlayerDirection.x * speed), transform.position.y - (_PlayerDirection.y * speed), 0.0f);
