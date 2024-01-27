@@ -12,7 +12,7 @@ public class Hitbox : MonoBehaviour
     if(wordPackage != null)
     {
       playerController.UpdatePlayerHP(-wordPackage.GetDamage());
-      Destroy(wordPackage.gameObject);
+      wordPackage.CleanDestoy();
     }
   }
 }

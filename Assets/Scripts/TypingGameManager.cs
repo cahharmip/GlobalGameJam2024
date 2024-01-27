@@ -13,7 +13,7 @@ public class TypingGameManager : MonoBehaviour
 
   private float timeCounter = 0;
   private int wordIndex = 0;
-  private string TYPING_PACKAGE_PATH = "Prefab/TypingPackage";
+  
   protected void Awake()
   {
 
@@ -26,12 +26,12 @@ public class TypingGameManager : MonoBehaviour
     if (timeCounter >= TickTime)
     {
       timeCounter = 0;
-      GameObject typingPackage = Instantiate(Resources.Load<GameObject>(TYPING_PACKAGE_PATH));
+      GameObject typingPackage = Instantiate(Resources.Load<GameObject>(Const.TYPING_PACKAGE_PATH));
       typingPackage.transform.SetParent(spawnPoint[(int) wordList[wordIndex].wpoint].transform);
       typingPackage.transform.localPosition = Vector3.zero;
       TypingDataReceiver receiver = GetComponent<TypingDataReceiver>();
       Transform player = GameObject.Find("Player").transform;
-      typingPackage.GetComponent<TypingPackageController>().Setup(wordList[wordIndex], receiver, player);
+      typingPackage.GetComponent<TypingPackageController>().Setup(wordList[wordIndex], receiver, player, () => { Destroy(typingPackage); });
       wordIndex++;
     }
   }

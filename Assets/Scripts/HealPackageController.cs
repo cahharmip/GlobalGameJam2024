@@ -6,7 +6,7 @@ using UnityEditor.ShaderKeywordFilter;
 using UnityEditor.U2D;
 using UnityEngine;
 
-public class TypingPackageController : MonoBehaviour
+public class HealPackageController : MonoBehaviour
 {
 
   private string definedWord = default;
@@ -18,7 +18,7 @@ public class TypingPackageController : MonoBehaviour
   [SerializeField]
   private float wordSpacing = 0;
   [SerializeField]
-  private int mode = 0; //mode 0 is not changing space / mode 1 is changing space
+  private int mode = 1; //mode 0 is not changing space / mode 1 is changing space
 
   private bool setupReady = false;
   private TypingDataReceiver receiver = default;
@@ -60,13 +60,13 @@ public class TypingPackageController : MonoBehaviour
     definedWord = wordObject.word.ToUpper();
     damage = wordObject.damage;
     this.target = target;
-    for(int i = 0; i < definedWord.Length; i++)
+    for (int i = 0; i < definedWord.Length; i++)
     {
       GameObject typingChar = Instantiate(Resources.Load<GameObject>(Const.TYPING_CHAR_PATH));
       typingChar.transform.SetParent(this.transform, false);
       if (i > 0) typingChar.transform.localPosition = new Vector3(lastTransform.x + wordSpacing, 0f, 0f);
       lastTransform = typingChar.transform.localPosition;
-      typingChar.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+      typingChar.transform.localScale = new Vector3(0.05f, 0.035f, 0.0f);
       typingChar.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Const.KEYUP_PATH + definedWord[i]);
     }
     this.receiver = receiver;
@@ -104,7 +104,6 @@ public class TypingPackageController : MonoBehaviour
 
     if (correctCount == definedWord.Length) //typing complete
     {
-      this.receiver.typingDataReceiver -= (InputListenner);
       onComplete?.Invoke();
     };
   }
@@ -119,11 +118,5 @@ public class TypingPackageController : MonoBehaviour
         transform.position = new Vector3(transform.position.x - (_PlayerDirection.x * speed), transform.position.y - (_PlayerDirection.y * speed), 0.0f);
       }
     }
-  }
-
-  public void CleanDestoy()
-  {
-    this.receiver.typingDataReceiver -= (InputListenner);
-    Destroy(gameObject);
   }
 }
