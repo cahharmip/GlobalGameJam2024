@@ -12,6 +12,7 @@ public class TypingPackageController : MonoBehaviour
   private string definedWord = default;
   private Transform target = default;
   private float speed = 0.03f;
+  private int damage = 1;
   private Vector3 _PlayerDirection = default;
   private int correctCount = 0;
   [SerializeField]
@@ -55,6 +56,7 @@ public class TypingPackageController : MonoBehaviour
     Vector3 lastTransform = default;
     speed = wordObject.speed;
     definedWord = wordObject.word.ToUpper();
+    damage = wordObject.damage;
     this.target = target;
     for(int i = 0; i < definedWord.Length; i++)
     {
@@ -68,6 +70,11 @@ public class TypingPackageController : MonoBehaviour
     this.receiver = receiver;
     this.receiver.typingDataReceiver += (InputListenner);
     setupReady = true;
+  }
+
+  public int GetDamage()
+  {
+    return damage;
   }
 
   private void InputListenner(char input)

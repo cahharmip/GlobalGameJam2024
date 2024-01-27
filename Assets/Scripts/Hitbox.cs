@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Hitbox : MonoBehaviour
 {
+  [SerializeField]
+  private PlayerController playerController;
   protected void OnTriggerEnter2D(Collider2D collision)
   {
     TypingPackageController wordPackage = collision.GetComponent<TypingPackageController>();
     if(wordPackage != null)
     {
-      //reduce player health based on word config.
+      playerController.UpdatePlayerHP(-wordPackage.GetDamage());
       Destroy(wordPackage.gameObject);
     }
   }

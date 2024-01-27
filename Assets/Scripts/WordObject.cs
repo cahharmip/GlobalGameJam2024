@@ -16,4 +16,5 @@ public class WordObject : ScriptableObject
   public string word = default;
   public float speed = default;
   public SPANWPOINT wpoint = default;
+  public int damage = 1;
 }
