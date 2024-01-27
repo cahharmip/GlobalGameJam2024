@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: giraffe
   m_EditorClassIdentifier: 
   word: giraffe
-  durationToTarget: 3
+  durationToTarget: 5.5
   wpoint: 1
   damage: 1

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: frog
   m_EditorClassIdentifier: 
   word: frog
-  durationToTarget: 3
+  durationToTarget: 4
   wpoint: 0
   damage: 1

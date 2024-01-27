@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: whale
   m_EditorClassIdentifier: 
   word: whale
-  durationToTarget: 3
-  wpoint: 2
+  durationToTarget: 4
+  wpoint: 1
   damage: 1

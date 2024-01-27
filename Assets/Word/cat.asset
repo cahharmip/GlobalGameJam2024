@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: cat
   m_EditorClassIdentifier: 
   word: cat
-  durationToTarget: 3
+  durationToTarget: 3.5
   wpoint: 2
   damage: 1
