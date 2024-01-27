@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHPUI : MonoBehaviour
 {
   [SerializeField]
   private GameObject HPUI;
+  [SerializeField]
+  private Slider HPBar;
 
-  private int maxHP;
+    private int maxHP;
   public void Setup()
   {
     maxHP = GameObject.Find("Player").GetComponent<PlayerController>().GetPlayerMaxHP();
@@ -19,5 +22,6 @@ public class PlayerHPUI : MonoBehaviour
   public void OnHPUpdate(int currentHP)
   {
     HPUI.GetComponent<TextMeshProUGUI>().text = ((currentHP * 1f / maxHP) * 100).ToString();
+    HPBar.value = (currentHP * 1f / maxHP);
   }
 }
