@@ -58,38 +58,38 @@ public class ComboData
   {
     if (currentScore <= 10)
     {
-      comboName = "D";
+      comboName = "Nicely \"D\"one";
       scoreMultiplier = 1.5f;
     }
     else if (currentScore <= 20)
     {
-      comboName = "C";
+      comboName = "Cool!";
       scoreMultiplier = 2f;
 
     }
     else if (currentScore <= 40)
     {
-      comboName = "B";
+      comboName = "Best!";
       scoreMultiplier = 3f;
     }
     else if (currentScore <= 60)
     {
-      comboName = "A";
+      comboName = "Awesome!";
       scoreMultiplier = 4f;
     }
     else if (currentScore <= 90)
     {
-      comboName = "S";
+      comboName = "SAVAGE!!";
       scoreMultiplier = 5f;
     }
     else if (currentScore <= 150)
     {
-      comboName = "SS";
+      comboName = "Sick Skills!!";
       scoreMultiplier = 6f;
     }
     else
     {
-      comboName = "SSS";
+      comboName = "Smokin' Sexy Style!!";
       scoreMultiplier = 7f;
     }
   }
