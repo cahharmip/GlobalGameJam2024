@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "New Word", menuName = "Create Word")]
+public class WordObject : ScriptableObject
+{
+  public enum SPANWPOINT
+  {
+    Bot = 0,
+    MID = 1,
+    HIGH = 2,
+    RANDOM = 3,
+  }
+
+  public string word = default;
+  public float speed = default;
+  public SPANWPOINT wpoint = default;
+}
