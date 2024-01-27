@@ -24,6 +24,8 @@ public class TypingPackageController : MonoBehaviour
   private TypingDataReceiver receiver = default;
   public delegate void OnComplete();
   public event OnComplete onComplete;
+  private ScoreData scoreData;
+  private ComboData comboData;
   private void Update()
   {
     if (mode == 1)
@@ -74,10 +76,12 @@ public class TypingPackageController : MonoBehaviour
     setupReady = true;
   }
 
-  public void Setup(WordObject wordObject, TypingDataReceiver receiver, Transform target, OnComplete onComplete)
+  public void Setup(WordObject wordObject, TypingDataReceiver receiver, ScoreData scoreData, ComboData comboData, Transform target, OnComplete onComplete)
   {
     Setup(wordObject, receiver, target);
     this.onComplete = onComplete;
+    this.scoreData = scoreData;
+    this.comboData = comboData;
   }
 
   public int GetDamage()
@@ -105,6 +109,8 @@ public class TypingPackageController : MonoBehaviour
     if (correctCount == definedWord.Length) //typing complete
     {
       this.receiver.typingDataReceiver -= (InputListenner);
+      scoreData.UpdateScore(definedWord.Length);
+      comboData.UpdateScore(definedWord.Length * 2);
       onComplete?.Invoke();
     };
   }
@@ -121,9 +127,10 @@ public class TypingPackageController : MonoBehaviour
     }
   }
 
-  public void CleanDestoy()
+  public void CleanDestoy() //can't type in time
   {
     this.receiver.typingDataReceiver -= (InputListenner);
+    comboData.UpdateScore(- definedWord.Length * 20);
     Destroy(gameObject);
   }
 }

@@ -13,26 +13,49 @@ public class TypingGameManager : MonoBehaviour
 
   private float timeCounter = 0;
   private int wordIndex = 0;
-  
-  protected void Awake()
+  private bool isSetup = false;
+  private ScoreData scoreData;
+  private ComboData comboData;
+  private float sumTime;
+  public void Setup(ScoreData scoreData, ComboData comboData)
   {
-
+    this.scoreData = scoreData;
+    this.comboData = comboData; 
+    isSetup = true;
   }
 
   protected void FixedUpdate()
   {
-    timeCounter += Time.deltaTime;
-    if (wordIndex >= wordList.Length) return;
-    if (timeCounter >= TickTime)
+    if (isSetup)
     {
-      timeCounter = 0;
-      GameObject typingPackage = Instantiate(Resources.Load<GameObject>(Const.TYPING_PACKAGE_PATH));
-      typingPackage.transform.SetParent(spawnPoint[(int) wordList[wordIndex].wpoint].transform);
-      typingPackage.transform.localPosition = Vector3.zero;
-      TypingDataReceiver receiver = GetComponent<TypingDataReceiver>();
-      Transform player = GameObject.Find("Player").transform;
-      typingPackage.GetComponent<TypingPackageController>().Setup(wordList[wordIndex], receiver, player, () => { Destroy(typingPackage); });
-      wordIndex++;
+      sumTime += Time.deltaTime;
+      if (Mathf.FloorToInt(sumTime) > 0.5f)
+      {
+        comboData.UpdateScore(-1);
+        sumTime = 0;
+      }
+      timeCounter += Time.deltaTime;
+      if (wordIndex >= wordList.Length)
+      {
+        isSetup = false;
+        return;
+      }
+      if (timeCounter >= TickTime)
+      {
+        timeCounter = 0;
+        GameObject typingPackage = Instantiate(Resources.Load<GameObject>(Const.TYPING_PACKAGE_PATH));
+        typingPackage.transform.SetParent(spawnPoint[(int)wordList[wordIndex].wpoint].transform);
+        typingPackage.transform.localPosition = Vector3.zero;
+        TypingDataReceiver receiver = GetComponent<TypingDataReceiver>();
+        Transform player = GameObject.Find("Player").transform;
+        typingPackage.GetComponent<TypingPackageController>().Setup(wordList[wordIndex], receiver, scoreData, comboData, player, () => { Destroy(typingPackage); });
+        wordIndex++;
+      }
     }
+  }
+
+  private void OnClearTypingPackage()
+  {
+
   }
 }
