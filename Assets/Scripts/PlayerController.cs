@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
   [SerializeField]
   private int playerMaxHP = 10;
-
   private int playerCurrentHP = 0;
 
   public delegate void PlayerHP(int updateValue);
@@ -21,6 +20,8 @@ public class PlayerController : MonoBehaviour
   private HealPackageController healPackage;
   [SerializeField]
   private TypingDataReceiver typingDataReceiver;
+  [SerializeField]
+  private Animator animator;
 
   public void Setup()
   {
@@ -69,7 +70,8 @@ public class PlayerController : MonoBehaviour
 
   private void OnGetInput(char input)
   {
-    Debug.Log("player get input -> " + input);
+    //Debug.Log("player get input -> " + input);
+    animator.SetTrigger("NextAnimation");
   }
 
   private void OnDestroy()
