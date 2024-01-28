@@ -940,12 +940,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMaxHP: 10
+  totalLetterInput: 0
   healPower: 0.05
   healWord: {fileID: 11400000, guid: d58ce97a14b7eff44a5f27308578086f, type: 2}
   healWordPosition: {fileID: 757208350}
   healPackage: {fileID: 278105028}
   typingDataReceiver: {fileID: 1449386599}
-  animator: {fileID: 255748152}
+  BilboAnimator: {fileID: 255748152}
+  ComputerAnimator: {fileID: 1517685985}
 --- !u!1 &408375195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,6 +2020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1517685983}
   - component: {fileID: 1517685984}
+  - component: {fileID: 1517685985}
   m_Layer: 0
   m_Name: Computer
   m_TagString: Untagged
@@ -2092,6 +2095,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1517685985
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517685982}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1459817c60e9dea41859d90e3f8f0a2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1641647416
 GameObject:
   m_ObjectHideFlags: 0

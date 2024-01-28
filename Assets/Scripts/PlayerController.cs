@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
   private int playerMaxHP = 10;
   private int playerCurrentHP = 0;
 
+  public int totalLetterInput = 0;
+
   public delegate void PlayerHP(int updateValue);
   public PlayerHP playerHpUpdater;
   [SerializeField]
@@ -21,7 +23,9 @@ public class PlayerController : MonoBehaviour
   [SerializeField]
   private TypingDataReceiver typingDataReceiver;
   [SerializeField]
-  private Animator animator;
+  private Animator BilboAnimator;
+  [SerializeField]
+  private Animator ComputerAnimator;
 
   public void Setup()
   {
@@ -71,7 +75,10 @@ public class PlayerController : MonoBehaviour
   private void OnGetInput(char input)
   {
     //Debug.Log("player get input -> " + input);
-    animator.SetTrigger("NextAnimation");
+    totalLetterInput += 1;
+    Debug.Log("Total Letter Input -> " + totalLetterInput);
+    BilboAnimator.SetTrigger("NextAnimation");
+    ComputerAnimator.SetTrigger("NextAnimation");
   }
 
   private void OnDestroy()
