@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class TextDialogue : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  [SerializeField]
+  public void Show()
+  {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  }
 }
