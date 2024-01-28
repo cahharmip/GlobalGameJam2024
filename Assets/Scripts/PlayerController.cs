@@ -19,11 +19,17 @@ public class PlayerController : MonoBehaviour
   private Transform healWordPosition;
   [SerializeField]
   private HealPackageController healPackage;
+  [SerializeField]
+  private TypingDataReceiver typingDataReceiver;
 
   public void Setup()
   {
     playerCurrentHP = playerMaxHP;
     SetupHealText();
+    if (typingDataReceiver != null)
+    {
+      typingDataReceiver.typingDataReceiver += OnGetInput;
+    }
   }
 
   public int GetPlayerCurrentHP()
@@ -59,5 +65,15 @@ public class PlayerController : MonoBehaviour
   private void Heal()
   {
     UpdatePlayerHP(Mathf.CeilToInt(playerCurrentHP * healPower));
+  }
+
+  private void OnGetInput(char input)
+  {
+    Debug.Log("player get input -> " + input);
+  }
+
+  private void OnDestroy()
+  {
+    typingDataReceiver.typingDataReceiver -= OnGetInput;
   }
 }

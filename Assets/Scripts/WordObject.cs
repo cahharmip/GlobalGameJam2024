@@ -18,4 +18,5 @@ public class WordObject : ScriptableObject
   public SPANWPOINT wpoint = default;
   public int damage = 1;
   public float delayNextWord = 0f;
+  public IEvent eventAfterDestroy = default;
 }

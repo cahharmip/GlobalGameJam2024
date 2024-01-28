@@ -17,15 +17,6 @@ public class StartMenuTypingPackage : MonoBehaviour
     receiver.typingDataReceiver += InputListenner;
   }
 
-  private void Update()
-  {
-
-  }
-
-  private void FixedUpdate()
-  {
-  }
-
   public void ResetState()
   {
     correctCount = 0;
