@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
 {
   public Sound[] sounds;
   public static AudioManager instance;
+  private bool setup;
   private void Awake()
   {
     if (instance == null)
@@ -19,6 +20,8 @@ public class AudioManager : MonoBehaviour
       Destroy(gameObject);
       return;
     }
+    DontDestroyOnLoad(gameObject);
+
     foreach(Sound s in sounds)
     {
       s.source = gameObject.AddComponent<AudioSource>();
@@ -33,7 +36,7 @@ public class AudioManager : MonoBehaviour
   public void Play(string name)
   {
     Sound s = Array.Find(sounds, s => s.name == name);
-    if (s==null)
+    if (s == null)
     {
       Debug.LogWarning("Cannot find the sound:" + name);
       return;

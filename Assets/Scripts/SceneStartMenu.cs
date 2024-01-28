@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SceneStartMenu : MonoBehaviour
 {
-  private void Awake()
+  private void Start()
   {
-    
+    FindObjectOfType<AudioManager>().Play("StartMenuBGM");
   }
 }
