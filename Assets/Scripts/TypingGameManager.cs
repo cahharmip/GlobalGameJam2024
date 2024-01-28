@@ -39,6 +39,9 @@ public class TypingGameManager : MonoBehaviour
       if (wordIndex >= wordList.Length)
       {
         isSetup = false;
+        SceneManager.currentSceneIndex += 1;
+        Debug.Log(SceneManager.currentSceneIndex);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.currentSceneIndex);
         return;
       }
       if (timeCounter >= TickTime)

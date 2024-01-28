@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eea10436f46defe488fac00af00cb594, type: 3}
-  m_Name: bang
+  m_Name: bang_high
   m_EditorClassIdentifier: 
   word: bang
-  durationToTarget: 0
-  wpoint: 0
+  durationToTarget: 1.5
+  wpoint: 2
   damage: 1
   delayNextWord: 0
   audioClip: {fileID: 0}

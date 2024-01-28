@@ -6,6 +6,6 @@ public class SceneFinalManager : MonoBehaviour
 {
   public void Setup()
   {
-
+    FindObjectOfType<AudioManager>().Stop("StartMenuBGM");
   }
 }

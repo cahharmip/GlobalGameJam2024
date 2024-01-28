@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+  public static int currentSceneIndex = 0;
+
   [SerializeField]
   private PlayerController player;
   [SerializeField]
@@ -28,6 +30,9 @@ public class SceneManager : MonoBehaviour
     player.Setup();
     playerHUD.Setup();
     gameManager.Setup(scoreData, comboData);
-    finalManager?.Setup();
+    if (finalManager != null)
+    {
+      finalManager.Setup();
+    }
   }
 }
