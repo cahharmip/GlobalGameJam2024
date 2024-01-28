@@ -17,3 +17,4 @@ MonoBehaviour:
   wpoint: 2
   damage: 1
   delayNextWord: 0
+  audioClip: {fileID: 8300000, guid: 4557a5236cd45be4d8c2be52b13178f4, type: 3}

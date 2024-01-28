@@ -1296,79 +1296,79 @@ MonoBehaviour:
   sounds:
   - name: StartMenuBGM
     clip: {fileID: 8300000, guid: 4630753e91ef119439bb190c5a65ee13, type: 3}
-    volumn: 1
+    volumn: 0.081
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: bear
     clip: {fileID: 8300000, guid: ff2549a48e3cd574081dd6468dfb453a, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: bird
     clip: {fileID: 8300000, guid: 4557a5236cd45be4d8c2be52b13178f4, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: cat
     clip: {fileID: 8300000, guid: 801866b949cf1464ca1889ad8c437456, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: crab
     clip: {fileID: 8300000, guid: f6675b9b6197b85418a12ed04ae39ff6, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: dog
     clip: {fileID: 8300000, guid: 1380549135a90ac458aad715e6003a26, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: duck
     clip: {fileID: 8300000, guid: af3fe8ddf9eff434c91808b60f6671ea, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: frog
     clip: {fileID: 8300000, guid: a7a99cd905022e54782f903c09814c01, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: lion
     clip: {fileID: 8300000, guid: 59fc262d132dd8c479a8d583fbac0a79, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: giraffe
     clip: {fileID: 8300000, guid: b2b037e599f3506489b7b48cd14e57f5, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: hippo
     clip: {fileID: 8300000, guid: 25a9996ceb4086e4f8f55405e7c9efb1, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: monkey
     clip: {fileID: 8300000, guid: 10590866bf835d146826859d11dbdafd, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: whale
     clip: {fileID: 8300000, guid: 29fc338b770c9be4588182555c1324e3, type: 3}
-    volumn: 1
+    volumn: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
