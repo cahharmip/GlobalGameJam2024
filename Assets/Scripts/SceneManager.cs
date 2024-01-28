@@ -14,6 +14,8 @@ public class SceneManager : MonoBehaviour
   private ScoreUI scoreUI;
   [SerializeField]
   private ComboUI comboUI;
+  [SerializeField]
+  private SceneFinalManager finalManager;
 
   private ScoreData scoreData;
   private ComboData comboData;
@@ -26,5 +28,6 @@ public class SceneManager : MonoBehaviour
     player.Setup();
     playerHUD.Setup();
     gameManager.Setup(scoreData, comboData);
+    finalManager?.Setup();
   }
 }

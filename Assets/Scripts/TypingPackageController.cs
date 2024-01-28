@@ -124,7 +124,7 @@ public class TypingPackageController : MonoBehaviour
       this.receiver.typingDataReceiver -= (InputListenner);
       scoreData.UpdateScore(definedWord.Length);
       comboData.UpdateScore(definedWord.Length * 2);
-      FindObjectOfType<AudioManager>().Play(definedWord.ToLower());
+      if (FindObjectOfType<AudioManager>() != null) FindObjectOfType<AudioManager>().Play(definedWord.ToLower());
       onComplete?.Invoke();
     };
   }
