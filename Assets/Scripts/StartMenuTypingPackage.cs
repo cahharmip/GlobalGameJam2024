@@ -38,8 +38,9 @@ public class StartMenuTypingPackage : MonoBehaviour
     {
       this.receiver.typingDataReceiver -= (InputListenner);
       //Play outro animation and then loadScene
-      Debug.Log("LoadScene");
-      UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+      int preferIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1;
+      UnityEngine.SceneManagement.SceneManager.LoadScene(preferIndex);
+      SceneManager.currentSceneIndex = preferIndex;
     };
   }
 

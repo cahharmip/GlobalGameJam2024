@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: bling
   m_EditorClassIdentifier: 
   word: bling
-  durationToTarget: 0
-  wpoint: 0
+  durationToTarget: 1.5
+  wpoint: 1
   damage: 1
   delayNextWord: 0
   audioClip: {fileID: 0}

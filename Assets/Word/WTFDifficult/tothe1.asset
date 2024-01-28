@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: tothe1
   m_EditorClassIdentifier: 
   word: 
-  durationToTarget: 0
+  durationToTarget: 1.5
   wpoint: 0
   damage: 1
   delayNextWord: 0

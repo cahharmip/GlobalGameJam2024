@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using Unity.VisualScripting;
 
 public class AudioManager : MonoBehaviour
 {
@@ -42,5 +43,17 @@ public class AudioManager : MonoBehaviour
       return;
     }
     s.source.Play();
+  }
+
+  public void Stop(string name)
+  {
+    AudioSource[] availabelSource = transform.GetComponents<AudioSource>();
+    foreach(AudioSource source in availabelSource)
+    {
+      if (source.clip.name == name)
+      {
+        source.Stop();
+      }
+    }
   }
 }
