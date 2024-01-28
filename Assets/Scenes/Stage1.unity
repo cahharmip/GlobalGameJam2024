@@ -1920,6 +1920,7 @@ MonoBehaviour:
   gameManager: {fileID: 1405659987}
   scoreUI: {fileID: 548782535}
   comboUI: {fileID: 1705461883}
+  finalManager: {fileID: 0}
 --- !u!4 &1266912112
 Transform:
   m_ObjectHideFlags: 0
@@ -2876,7 +2877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.size
-      value: 18
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: spawnPoint.Array.size
@@ -2885,75 +2886,111 @@ PrefabInstance:
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: c5deafcd338f63940af65a11e595ff7c, type: 2}
+      objectReference: {fileID: 11400000, guid: 138739f2e11971d4ba1050d16f433095, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 04b2819291881554780d0f15c0427ed5, type: 2}
+      objectReference: {fileID: 11400000, guid: 4854c0c37e9751c4eb10da5d5bfe44d6, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: ae1d0bb4eb652fb4592122c6523a8595, type: 2}
+      objectReference: {fileID: 11400000, guid: 138739f2e11971d4ba1050d16f433095, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 0c46b11cb6141a040be0cc6df0296344, type: 2}
+      objectReference: {fileID: 11400000, guid: 195fc58d71812ed40acb996363795347, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 3a5c66b28e709e346b712234a7d3b481, type: 2}
+      objectReference: {fileID: 11400000, guid: 43953d3436437d240936a0c492cc3355, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 5f06eb93424524b41b78235c81003df6, type: 2}
+      objectReference: {fileID: 11400000, guid: 138739f2e11971d4ba1050d16f433095, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: b0579b2a27efb1f4f9d341425568af50, type: 2}
+      objectReference: {fileID: 11400000, guid: 35386337aaf80c84991923104680e4f2, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[7]
       value: 
-      objectReference: {fileID: 11400000, guid: 3a5c66b28e709e346b712234a7d3b481, type: 2}
+      objectReference: {fileID: 11400000, guid: 702d0d24e274926438b3516baba23048, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[8]
       value: 
-      objectReference: {fileID: 11400000, guid: ae1d0bb4eb652fb4592122c6523a8595, type: 2}
+      objectReference: {fileID: 11400000, guid: 4854c0c37e9751c4eb10da5d5bfe44d6, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[9]
       value: 
-      objectReference: {fileID: 11400000, guid: 5f06eb93424524b41b78235c81003df6, type: 2}
+      objectReference: {fileID: 11400000, guid: e1ed9ae0f5a793c4ab7ab25a09c8970c, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[10]
       value: 
-      objectReference: {fileID: 11400000, guid: 0c46b11cb6141a040be0cc6df0296344, type: 2}
+      objectReference: {fileID: 11400000, guid: dc57b1852849be0428ed283f887cab61, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[11]
       value: 
-      objectReference: {fileID: 11400000, guid: b0579b2a27efb1f4f9d341425568af50, type: 2}
+      objectReference: {fileID: 11400000, guid: e1ed9ae0f5a793c4ab7ab25a09c8970c, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[12]
       value: 
-      objectReference: {fileID: 11400000, guid: 3a5c66b28e709e346b712234a7d3b481, type: 2}
+      objectReference: {fileID: 11400000, guid: 195fc58d71812ed40acb996363795347, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[13]
       value: 
-      objectReference: {fileID: 11400000, guid: 3a5c66b28e709e346b712234a7d3b481, type: 2}
+      objectReference: {fileID: 11400000, guid: 43953d3436437d240936a0c492cc3355, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[14]
       value: 
-      objectReference: {fileID: 11400000, guid: 3a5c66b28e709e346b712234a7d3b481, type: 2}
+      objectReference: {fileID: 11400000, guid: 35386337aaf80c84991923104680e4f2, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[15]
       value: 
-      objectReference: {fileID: 11400000, guid: c7cbc073a09ebb44fb1cf567617b2936, type: 2}
+      objectReference: {fileID: 11400000, guid: e1ed9ae0f5a793c4ab7ab25a09c8970c, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[16]
       value: 
-      objectReference: {fileID: 11400000, guid: ec31eaed987023041bbbd9b79a0e100c, type: 2}
+      objectReference: {fileID: 11400000, guid: dc57b1852849be0428ed283f887cab61, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: wordList.Array.data[17]
       value: 
-      objectReference: {fileID: 11400000, guid: ae1d0bb4eb652fb4592122c6523a8595, type: 2}
+      objectReference: {fileID: 11400000, guid: 43953d3436437d240936a0c492cc3355, type: 2}
+    - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
+      propertyPath: wordList.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: 702d0d24e274926438b3516baba23048, type: 2}
+    - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
+      propertyPath: wordList.Array.data[19]
+      value: 
+      objectReference: {fileID: 11400000, guid: e1ed9ae0f5a793c4ab7ab25a09c8970c, type: 2}
+    - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
+      propertyPath: wordList.Array.data[20]
+      value: 
+      objectReference: {fileID: 11400000, guid: 43953d3436437d240936a0c492cc3355, type: 2}
+    - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
+      propertyPath: wordList.Array.data[21]
+      value: 
+      objectReference: {fileID: 11400000, guid: 138739f2e11971d4ba1050d16f433095, type: 2}
+    - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
+      propertyPath: wordList.Array.data[22]
+      value: 
+      objectReference: {fileID: 11400000, guid: 43953d3436437d240936a0c492cc3355, type: 2}
+    - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
+      propertyPath: wordList.Array.data[23]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4854c0c37e9751c4eb10da5d5bfe44d6, type: 2}
+    - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
+      propertyPath: wordList.Array.data[24]
+      value: 
+      objectReference: {fileID: 11400000, guid: 35386337aaf80c84991923104680e4f2, type: 2}
+    - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
+      propertyPath: wordList.Array.data[25]
+      value: 
+      objectReference: {fileID: 11400000, guid: e1ed9ae0f5a793c4ab7ab25a09c8970c, type: 2}
+    - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
+      propertyPath: wordList.Array.data[26]
+      value: 
+      objectReference: {fileID: 11400000, guid: 195fc58d71812ed40acb996363795347, type: 2}
     - target: {fileID: 4238548407849465040, guid: 3d61e6085a5227943ab482d34b3a41ce, type: 3}
       propertyPath: spawnPoint.Array.data[0]
       value: 

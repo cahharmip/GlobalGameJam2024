@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: bird
   m_EditorClassIdentifier: 
   word: bird
-  durationToTarget: 3.7
-  wpoint: 0
+  durationToTarget: 3.5
+  wpoint: 2
   damage: 1
-  delayNextWord: 0
+  delayNextWord: 1
   audioClip: {fileID: 8300000, guid: 4557a5236cd45be4d8c2be52b13178f4, type: 3}

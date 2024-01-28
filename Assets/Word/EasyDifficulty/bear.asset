@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: bear
   m_EditorClassIdentifier: 
   word: bear
-  durationToTarget: 5
+  durationToTarget: 4
   wpoint: 0
   damage: 1
-  delayNextWord: 0
+  delayNextWord: 1
   audioClip: {fileID: 8300000, guid: ff2549a48e3cd574081dd6468dfb453a, type: 3}

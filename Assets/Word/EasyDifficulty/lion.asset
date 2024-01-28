@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: lion
   m_EditorClassIdentifier: 
   word: lion
-  durationToTarget: 7
-  wpoint: 0
+  durationToTarget: 5
+  wpoint: 1
   damage: 1
-  delayNextWord: 0
+  delayNextWord: 1
   audioClip: {fileID: 8300000, guid: 59fc262d132dd8c479a8d583fbac0a79, type: 3}

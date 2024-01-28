@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: dog
   m_EditorClassIdentifier: 
   word: dog
-  durationToTarget: 4.5
-  wpoint: 0
+  durationToTarget: 4
+  wpoint: 1
   damage: 1
-  delayNextWord: 0
+  delayNextWord: 1
   audioClip: {fileID: 8300000, guid: 1380549135a90ac458aad715e6003a26, type: 3}

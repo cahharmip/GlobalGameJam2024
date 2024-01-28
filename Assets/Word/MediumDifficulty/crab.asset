@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eea10436f46defe488fac00af00cb594, type: 3}
-  m_Name: frog
+  m_Name: crab
   m_EditorClassIdentifier: 
-  word: frog
-  durationToTarget: 4
+  word: crab
+  durationToTarget: 6
   wpoint: 0
   damage: 1
   delayNextWord: 0.5
-  audioClip: {fileID: 8300000, guid: a7a99cd905022e54782f903c09814c01, type: 3}
+  audioClip: {fileID: 8300000, guid: f6675b9b6197b85418a12ed04ae39ff6, type: 3}
