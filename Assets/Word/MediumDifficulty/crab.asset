@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: crab
   m_EditorClassIdentifier: 
   word: crab
-  durationToTarget: 6
-  wpoint: 0
+  durationToTarget: 5
+  wpoint: 1
   damage: 1
   delayNextWord: 0.5
   audioClip: {fileID: 8300000, guid: f6675b9b6197b85418a12ed04ae39ff6, type: 3}

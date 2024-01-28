@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: hippo
   m_EditorClassIdentifier: 
   word: hippo
-  durationToTarget: 4.5
-  wpoint: 0
+  durationToTarget: 4.25
+  wpoint: 1
   damage: 1
   delayNextWord: 0.5
   audioClip: {fileID: 8300000, guid: 25a9996ceb4086e4f8f55405e7c9efb1, type: 3}
